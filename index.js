@@ -2,10 +2,6 @@ const image = document.querySelector("img");
 const jokeDIV = document.querySelector("#display-joke");
 const button = document.querySelector("#get-joke");
 
-button.addEventListener("click", function () {
-  getRandomJoke();
-});
-
 function getRandomJoke() {
   const ajax = new XMLHttpRequest();
   const url = "https://api.chucknorris.io/jokes/random";
@@ -23,3 +19,8 @@ function getRandomJoke() {
   };
   ajax.send();
 }
+
+button.addEventListener("click", function () {
+    getRandomJoke();
+  });
+  
